@@ -1,26 +1,6 @@
 ---
+import { Time } from '../components/Time.tsx';
 import '../styles/global.css';
-
-const date = new Date();
-const hours = date.getHours();
-const minutes = date.getMinutes();
-
-const formattedHours = hours % 12;
-const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes.toString();
-
-const calculateTimeSuffix = () => {
-  if (hours >= 5 && hours < 12) {
-    return 'morning';
-  } else if (hours >= 12 && hours < 17) {
-    return 'afternoon';
-  } else if (hours >= 17 && hours < 21) {
-    return 'evening';
-  } else {
-    return 'night';
-  }
-};
-
-const timeSuffix = calculateTimeSuffix();
 ---
 
 <html lang='en'>
@@ -33,47 +13,19 @@ const timeSuffix = calculateTimeSuffix();
   </head>
   <body>
     <img
-      src='https://images.unsplash.com/photo-1488489153583-89ce18dd4968'
+      src='https://images.unsplash.com/photo-1476231682828-37e571bc172f'
       class='splash-image'
     />
-    <div class='text-block'>
-      <h3 class='title'>{formattedHours}:{formattedMinutes}</h3>
-      <p class='subtitle'>Good {timeSuffix}</p>
-    </div>
+    <Time client:only='react' />
   </body>
 </html>
 
 <style>
-  * {
-  }
-
-  .text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-  }
-
-  .title {
-    color: white;
-    font-size: 160px;
-  }
-
-  .subtitle {
-    color: white;
-    font-size: 36px;
-    text-align: center;
-    font-weight: 500;
-  }
-
   .splash-image {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Ensure it covers the viewport width */
+    width: 100vw;
     height: 100vh;
     object-fit: cover;
   }
