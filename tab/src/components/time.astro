@@ -1,0 +1,51 @@
+---
+const date = new Date();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+
+const formattedHours = hours % 12;
+const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes.toString();
+
+const calculateTimeSuffix = () => {
+  if (hours >= 5 && hours < 12) {
+    return 'morning';
+  } else if (hours >= 12 && hours < 17) {
+    return 'afternoon';
+  } else if (hours >= 17 && hours < 21) {
+    return 'evening';
+  } else {
+    return 'night';
+  }
+};
+
+const timeSuffix = calculateTimeSuffix();
+---
+
+<div class='text-block'>
+  <h3 class='title'>{formattedHours}:{formattedMinutes}</h3>
+  <p class='subtitle'>Good {timeSuffix}</p>
+</div>
+
+<style>
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+  }
+
+  .title {
+    color: white;
+    font-size: 160px;
+  }
+
+  .subtitle {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+  }
+</style>
