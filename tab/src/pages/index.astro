@@ -1,6 +1,7 @@
 ---
 import { Time } from '../components/Time.tsx';
 import '../styles/global.css';
+import { RandomImage } from '../components/RandomImage';
 ---
 
 <html lang='en'>
@@ -17,10 +18,8 @@ import '../styles/global.css';
     <meta name='monetag' content='11a40653f7ce2a546a0064169c86f3d2' />
   </head>
   <body class='fade-in'>
-    <img
-      src='https://pub-bf0a670fada84c7cb87dc44341fb7cb7.r2.dev/photo-1476231682828-37e571bc172f-min.jpeg'
-      class='fixed top-0 left-0 w-screen h-screen object-cover'
-    />
+    <RandomImage client:only='react' />
+    <div class='fixed top-0 left-0 bottom-0 right-0 bg-black opacity-25'></div>
     <Time client:only='react' />
     <script type='text/javascript'>
       var infolinks_pid = 3424156;
