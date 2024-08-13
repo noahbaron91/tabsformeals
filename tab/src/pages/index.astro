@@ -1,9 +1,7 @@
 ---
 import { Time } from '../components/Time.tsx';
 import '../styles/global.css';
-import { selectRandomImageURL } from '../utils/images';
-
-const imageURL = selectRandomImageURL();
+import { RandomImage } from '../components/RandomImage';
 ---
 
 <html lang='en'>
@@ -20,10 +18,7 @@ const imageURL = selectRandomImageURL();
     <meta name='monetag' content='11a40653f7ce2a546a0064169c86f3d2' />
   </head>
   <body class='fade-in'>
-    <img
-      src={imageURL}
-      class='fixed top-0 left-0 w-screen h-screen object-cover'
-    />
+    <RandomImage />
     <div class='fixed top-0 left-0 bottom-0 right-0 bg-black opacity-25'></div>
     <Time client:only='react' />
     <script type='text/javascript'>
