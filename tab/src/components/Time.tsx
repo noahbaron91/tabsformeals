@@ -22,10 +22,10 @@ function Time() {
 
   return (
     <div className='flex flex-col gap-2 top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 fixed'>
-      <h3 className='text-white text-[148px] font-["Inter Tight"]'>
+      <h3 className='fade-in-text text-white text-[148px] font-["Inter Tight"]'>
         {formattedHours}:{formattedMinutes}
       </h3>
-      <p className='text-white text-3xl text-center font-medium'>
+      <p className='text-white text-3xl fade-in-text text-center font-medium'>
         Good {timeSuffix}
       </p>
     </div>
