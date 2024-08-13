@@ -1,4 +1,4 @@
-const TARGET_URL = 'https://example.com';
+const TARGET_URL = 'https://tab.tabsformeals.com';
 
 try {
   chrome.tabs.getCurrent(({ id }) => {
@@ -6,5 +6,5 @@ try {
   });
 } catch (error) {
   // This method is worse because the search bar loses focus
-  window.location.href = 'https://example.com';
+  window.location.href = TARGET_URL;
 }

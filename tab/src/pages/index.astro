@@ -16,22 +16,27 @@ import '../styles/global.css';
       crossorigin='anonymous'></script>
     <meta name='monetag' content='11a40653f7ce2a546a0064169c86f3d2' />
   </head>
-  <body>
+  <body class='fade-in'>
     <img
       src='https://images.unsplash.com/photo-1476231682828-37e571bc172f'
-      class='splash-image'
+      class='fixed top-0 left-0 w-screen h-screen object-cover'
     />
     <Time client:only='react' />
   </body>
 </html>
 
 <style>
-  .splash-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+  .fade-in {
+    background-color: rgb(0, 0, 0);
+    animation: fadeIn ease 2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
