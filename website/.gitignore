@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# https://docs.astro.build/en/guides/integrations-guide/cloudflare/#cloudflare-runtime
+.dev.vars
