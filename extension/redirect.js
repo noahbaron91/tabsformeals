@@ -1,4 +1,4 @@
-const TARGET_URL = 'https://tab.tabsformeals.com';
+const TARGET_URL = 'https://tabsformeals.com/tab';
 
 try {
   chrome.tabs.getCurrent(({ id }) => {
