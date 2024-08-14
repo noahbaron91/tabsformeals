@@ -14,7 +14,7 @@ import { Carousel } from '../components/Carousel';
 <body
   class='min-h-screen min-[515px]:mx-9 py-7 px-6 xl:mx-32 flex flex-col justify-between'
 >
-  <h3 class='font-title font-semibold text-2xl'>tabsformeals</h3>
+  <a href='/' class='font-title font-semibold text-2xl'>tabsformeals</a>
   <div
     class='flex flex-col gap-8 py-12 min-[515px]:items-center min-[515px]:mt-6'
   >
@@ -35,11 +35,24 @@ import { Carousel } from '../components/Carousel';
     </div>
   </div>
   <Carousel client:only='react' />
-  <div class='flex flex-col gap-4 items-center'></div>
-  <div class='text-gray-500 mt-10 flex justify-between items-center'>
-    <div class='flex flex-col'>
-      <p>100% of profits are donated to charity</p>
-      <p>built and maintained by volunteers</p>
+  <div
+    class='flex flex-col gap-3 text-gray-500 sm:flex-row mt-10 sm:justify-between'
+  >
+    <div class='flex flex-col gap-3'>
+      <div class='flex justify-between items-center'>
+        <div class='flex gap-12'>
+          <div class='flex flex-col'>
+            <p>100% of profits are donated to charity</p>
+            <p>Built and maintained by volunteers</p>
+          </div>
+        </div>
+      </div>
+      <div class='flex flex-col'>
+        <a href='/privacy-policy' class='text-gray-500'>Privacy policy</a>
+        <a href='/privacy-policy' class='text-gray-500'
+          >Financial transparency</a
+        >
+      </div>
     </div>
     <a target='_blank' href='https://github.com/noahbaron91/tabsformeals'>
       <svg

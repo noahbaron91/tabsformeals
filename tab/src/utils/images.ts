@@ -1,4 +1,4 @@
-const IMAGE_DOMAIN = 'https://pub-bf0a670fada84c7cb87dc44341fb7cb7.r2.dev';
+const IMAGE_DOMAIN = 'https://images.tabsformeals.com';
 
 const imageSlugs = [
   'photo-1476231682828-37e571bc172f-min.jpeg',
