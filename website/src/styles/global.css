@@ -84,9 +84,16 @@ h6 {
   }
 }
 
-iframe {
+iframe[width='728'] {
   position: fixed;
   z-index: 999;
   right: 0;
   bottom: 0;
+}
+
+iframe[width='300'] {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 90px;
 }
